@@ -1,32 +1,11 @@
-<div class="flex justify-center">
-    <div class="mt-5 mb-3 xl:w-96">
-      <label for="exampleFormControlInput1" class="form-label inline-block mb-2 text-gray-700"
+<div class="flex justify-center bg-sky-700">
+    <div class="mt-5 mb-3 xl:w-96 text-center">
+      <label class="form-label inline-block mb-2 text-black-700 text-2xl"
         >Filtro</label
       >
-      <input
-        type="text"
-        class="
-          form-control
-          block
-          w-full
-          px-3
-          py-1.5
-          text-base
-          font-normal
-          text-gray-700
-          bg-white bg-clip-padding
-          border border-solid border-gray-300
-          rounded
-          transition
-          ease-in-out
-          m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-        "
-        id="exampleFormControlInput1"
-        placeholder="Correo electronico"
-        [(ngModel)]="filtroPost"
-        name="filtroPost"
-      />
+      <input [(ngModel)]="filtroPost"
+      name="filtroPost" type="email" id="helper-text" aria-describedby="helper-text-explanation" class="bg-blue-50 border border-gray-300 text-black-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-blue-450 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@correo.com">
+      
     </div>
   </div>
 
@@ -35,36 +14,36 @@
         <div class="">
             <table class="min-w-full">
                 <thead class="border-b">
-                    <tr>
-                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                    <tr class="text-xl font-semibold"> 
+                        <th scope="col" class=" text-gray-900 px-6 py-4 text-left">
                             Name
                         </th>
-                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        <th scope="col" class="text-gray-900 px-6 py-4 text-left">
                             Email
                         </th>
-                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        <th scope="col" class="text-gray-900 px-6 py-4 text-left">
                             Position
                         </th>
-                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        <th scope="col" class="text-gray-900 px-6 py-4 text-left">
                             Salary
                         </th>
-                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                        <th scope="col" class=" text-gray-900 px-6 py-4 text-left">
                             Details
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let user of usuario | filtro:filtroPost" class="border-b" >
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                    <tr *ngFor="let user of usuario | filtro:filtroPost" class="border-b  text-lg" >
+                        <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                             {{user.name}}
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                             {{user.email}}
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                             {{user.position}}
                         </td>
-                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        <td class=" text-gray-900  px-6 py-4 whitespace-nowrap">
                             {{user.salary}}
                         </td>
                         <td>
